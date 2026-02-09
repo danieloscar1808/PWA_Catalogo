@@ -1,1 +1,97 @@
-/* futuristic css */
+/* ======== ESTILO FUTURISTA TECNOLÓGICO ======== */
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: radial-gradient(circle at top, #121829, #0A0F1F 70%);
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.logo-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.logo {
+  width: 180px;
+  filter: drop-shadow(0 0 12px #00e5ff);
+}
+
+/* ===== Secciones tipo tarjeta futurista ===== */
+section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+h1, h2 {
+  margin-top: 0;
+  text-shadow: 0 0 6px #0077ff;
+}
+
+/* ===== Inputs Futuristas ===== */
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 229, 255, 0.5);
+  background: rgba(255, 255, 255, 0.07);
+  color: white;
+  margin: 5px;
+  outline: none;
+  width: 180px;
+  transition: 0.2s ease;
+}
+
+input:focus, select:focus {
+  box-shadow: 0 0 12px #00e5ff;
+  border-color: #00e5ff;
+}
+
+/* ===== Botones Neon ===== */
+button {
+  padding: 10px 18px;
+  background: #00e5ff;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 12px #00e5ff;
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00e5ff;
+}
+
+/* ===== Tabla ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th {
+  background: rgba(0, 229, 255, 0.15);
+  padding: 10px;
+  border-bottom: 1px solid #00e5ff;
+}
+
+table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+}
+
+table tr:hover {
+  background: rgba(0, 229, 255, 0.08);
+}
+
+td select {
+  width: 100%;
+}

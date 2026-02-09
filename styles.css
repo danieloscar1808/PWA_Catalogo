@@ -1,76 +1,104 @@
-/* ======== ESTILO FUTURISTA TECNOLÓGICO ======== */
+/* ======== ESTILO FUTURISTA TECNOLÓGICO VERSION AVANZADA ======== */
 
+/* Fondo general */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: radial-gradient(circle at top, #121829, #0A0F1F 70%);
   color: white;
   margin: 0;
-  padding: 20px;
+  padding: 15px;
+  overflow-x: hidden;
 }
 
+/* LOGO */
 .logo-header {
   text-align: center;
   margin-bottom: 25px;
 }
 
 .logo {
-  width: 180px;
-  filter: drop-shadow(0 0 12px #00e5ff);
+  width: 160px;
+  filter: drop-shadow(0 0 18px #00e5ff);
+  animation: glowPulse 3s infinite ease-in-out;
 }
 
-/* ===== Secciones tipo tarjeta futurista ===== */
+/* Animación futurista del logo */
+@keyframes glowPulse {
+  0% { filter: drop-shadow(0 0 10px #00e5ff); }
+  50% { filter: drop-shadow(0 0 25px #00e5ff); }
+  100% { filter: drop-shadow(0 0 10px #00e5ff); }
+}
+
+/* TÍTULOS */
+h1, h2 {
+  margin-top: 0;
+  text-shadow: 0 0 6px #00e5ff;
+}
+
+/* TARJETAS FUTURISTAS */
 section {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
   padding: 20px;
   margin-bottom: 25px;
   border-radius: 16px;
-  border: 1px solid rgba(0, 229, 255, 0.25);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.15);
+  animation: fadeIn 0.6s ease forwards;
 }
 
-h1, h2 {
-  margin-top: 0;
-  text-shadow: 0 0 6px #0077ff;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== Inputs Futuristas ===== */
+/* INPUTS */
 input, select {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 229, 255, 0.5);
-  background: rgba(255, 255, 255, 0.07);
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 229, 255, 0.6);
+  background: rgba(255, 255, 255, 0.10);
   color: white;
-  margin: 5px;
+  margin: 5px 0;
+  width: 100%;
   outline: none;
-  width: 180px;
-  transition: 0.2s ease;
+  transition: 0.25s ease;
 }
 
 input:focus, select:focus {
-  box-shadow: 0 0 12px #00e5ff;
+  box-shadow: 0 0 15px #00e5ff;
   border-color: #00e5ff;
+  transform: scale(1.02);
 }
 
-/* ===== Botones Neon ===== */
+/* BOTONES 3D */
 button {
-  padding: 10px 18px;
-  background: #00e5ff;
+  padding: 12px 20px;
+  background: linear-gradient(180deg, #00e5ff, #00bcd4);
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   color: #000;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 0 12px #00e5ff;
-  transition: transform 0.15s, box-shadow 0.2s;
+  margin-top: 10px;
+  width: 100%;
+
+  /* Efecto 3D */
+  box-shadow: 0 5px 0 #0097a7, 0 0 20px #00e5ff;
+  transition: 0.2s ease;
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #0097a7, 0 0 10px #00e5ff;
 }
 
 button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00e5ff;
+  transform: scale(1.03);
+  box-shadow: 0 6px 0 #0097a7, 0 0 25px #00e5ff;
 }
 
-/* ===== Tabla ===== */
+/* TABLA */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -78,20 +106,47 @@ table {
 }
 
 table th {
-  background: rgba(0, 229, 255, 0.15);
-  padding: 10px;
+  background: rgba(0, 229, 255, 0.2);
+  padding: 12px;
   border-bottom: 1px solid #00e5ff;
+  text-align: left;
 }
 
 table td {
-  padding: 10px;
+  padding: 12px;
   border-bottom: 1px solid rgba(0, 229, 255, 0.15);
 }
 
-table tr:hover {
-  background: rgba(0, 229, 255, 0.08);
+tr:hover {
+  background: rgba(0, 229, 255, 0.1);
 }
 
+/* SELECT en tabla */
 td select {
   width: 100%;
+}
+
+/* ========= RESPONSIVE (APP NATIVA MÓVILES) ========= */
+@media (max-width: 600px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  table th, table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 12px;
+  }
 }

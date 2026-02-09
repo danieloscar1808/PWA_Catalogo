@@ -4,37 +4,27 @@
   <meta charset="UTF-8">
   <title>Catálogo Futurista - PWA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- PWA -->
   <link rel="manifest" href="manifest.json">
-
-  <!-- Estilos futuristas -->
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <!-- ENCABEZADO CON LOGO FUTURISTA -->
   <header class="logo-header">
     <img src="icon-512.png" alt="Logo" class="logo">
   </header>
 
   <h1>Catálogo de Productos</h1>
 
-  <!-- IMPORTAR JSON -->
   <section class="import-section">
     <h2>Importar catálogo JSON</h2>
     <input type="file" id="importFile" accept="application/json">
   </section>
 
-  <!-- AGREGAR ITEM -->
   <section class="add-section">
     <h2>Agregar Item</h2>
-
     <form id="addForm">
       <input type="text" id="addName" placeholder="Nombre" required>
       <input type="number" id="addPrice" placeholder="Precio" required>
-
       <select id="addCategory" required>
         <option value="">Categoría</option>
         <option value="general">General</option>
@@ -42,15 +32,12 @@
         <option value="eléctrico">Eléctrico</option>
         <option value="solar">Solar</option>
       </select>
-
       <button type="submit">Agregar</button>
     </form>
   </section>
 
-  <!-- LISTADO -->
   <section class="list-section">
     <h2>Listado de Items</h2>
-
     <table id="itemsTable">
       <thead>
         <tr>
@@ -60,25 +47,19 @@
           <th>Acciones</th>
         </tr>
       </thead>
-
       <tbody></tbody>
     </table>
   </section>
 
-  <!-- EXPORTAR -->
   <section>
     <button id="exportBtn">Exportar JSON</button>
   </section>
 
-  <!-- SCRIPTS -->
   <script src="app.js"></script>
-
-  <!-- REGISTRO SERVICE WORKER -->
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("sw.js");
     }
   </script>
-
 </body>
 </html>

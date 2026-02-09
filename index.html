@@ -4,27 +4,56 @@
   <meta charset="UTF-8">
   <title>Catálogo Futurista - PWA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+=======
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Estilos futuristas -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ENCABEZADO CON LOGO FUTURISTA -->
+>>>>>>> 92b92e7399abceb966611c0de5e5bc22de719de3
   <header class="logo-header">
     <img src="icon-512.png" alt="Logo" class="logo">
   </header>
 
   <h1>Catálogo de Productos</h1>
 
+<<<<<<< HEAD
+=======
+  <!-- IMPORTAR JSON -->
+>>>>>>> 92b92e7399abceb966611c0de5e5bc22de719de3
   <section class="import-section">
     <h2>Importar catálogo JSON</h2>
     <input type="file" id="importFile" accept="application/json">
   </section>
 
+<<<<<<< HEAD
   <section class="add-section">
     <h2>Agregar Item</h2>
     <form id="addForm">
       <input type="text" id="addName" placeholder="Nombre" required>
       <input type="number" id="addPrice" placeholder="Precio" required>
+=======
+  <!-- AGREGAR ITEM -->
+  <section class="add-section">
+    <h2>Agregar Item</h2>
+
+    <form id="addForm">
+      <input type="text" id="addName" placeholder="Nombre" required>
+      <input type="number" id="addPrice" placeholder="Precio" required>
+
+>>>>>>> 92b92e7399abceb966611c0de5e5bc22de719de3
       <select id="addCategory" required>
         <option value="">Categoría</option>
         <option value="general">General</option>
@@ -32,12 +61,23 @@
         <option value="eléctrico">Eléctrico</option>
         <option value="solar">Solar</option>
       </select>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 92b92e7399abceb966611c0de5e5bc22de719de3
       <button type="submit">Agregar</button>
     </form>
   </section>
 
+<<<<<<< HEAD
   <section class="list-section">
     <h2>Listado de Items</h2>
+=======
+  <!-- LISTADO -->
+  <section class="list-section">
+    <h2>Listado de Items</h2>
+
+>>>>>>> 92b92e7399abceb966611c0de5e5bc22de719de3
     <table id="itemsTable">
       <thead>
         <tr>
@@ -47,19 +87,40 @@
           <th>Acciones</th>
         </tr>
       </thead>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 92b92e7399abceb966611c0de5e5bc22de719de3
       <tbody></tbody>
     </table>
   </section>
 
+<<<<<<< HEAD
+=======
+  <!-- EXPORTAR -->
+>>>>>>> 92b92e7399abceb966611c0de5e5bc22de719de3
   <section>
     <button id="exportBtn">Exportar JSON</button>
   </section>
 
+<<<<<<< HEAD
   <script src="app.js"></script>
+=======
+  <!-- SCRIPTS -->
+  <script src="app.js"></script>
+
+  <!-- REGISTRO SERVICE WORKER -->
+>>>>>>> 92b92e7399abceb966611c0de5e5bc22de719de3
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("sw.js");
     }
   </script>
+<<<<<<< HEAD
 </body>
 </html>
+=======
+
+</body>
+</html>
+>>>>>>> 92b92e7399abceb966611c0de5e5bc22de719de3
